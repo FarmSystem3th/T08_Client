@@ -10,6 +10,15 @@ abstract class ColorSystem {
   /// Black Color
   static const Color black = Color(0xFF151515);
 
+  /// bottom navigation notification color
+  static const MaterialColor bottomNaviagation = MaterialColor(
+    _primaryValue,
+    <int, Color>{
+      100: Color(0xFF589CF6),
+      900: Color(0xFFD9D9D9),
+    },
+  );
+
   /// Primary Color
   static const MaterialColor primary = MaterialColor(
     _primaryValue,

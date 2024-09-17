@@ -17,13 +17,9 @@ class CustomBottomNavigationBar extends BaseWidget<RootViewModel> {
           splashFactory: NoSplash.splashFactory,
         ),
         child: Container(
-          height: GetPlatform.isAndroid ? 84 : 112,
+          height: GetPlatform.isAndroid ? 74 : 112,
           decoration: BoxDecoration(
             color: ColorSystem.white,
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(16),
-              topRight: Radius.circular(16),
-            ),
             border: Border(
               top: BorderSide(
                 color: ColorSystem.neutral.shade200,
@@ -39,10 +35,6 @@ class CustomBottomNavigationBar extends BaseWidget<RootViewModel> {
             ],
           ),
           child: ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(16),
-              topRight: Radius.circular(16),
-            ),
             child: BottomNavigationBar(
               // State Management
               currentIndex: viewModel.selectedIndex,
@@ -53,30 +45,35 @@ class CustomBottomNavigationBar extends BaseWidget<RootViewModel> {
               type: BottomNavigationBarType.fixed,
 
               // When not selected
-              unselectedItemColor: ColorSystem.neutral.shade200,
+              unselectedIconTheme: IconThemeData(
+                color: ColorSystem.bottomNaviagation.shade900,
+              ),
+              unselectedItemColor: ColorSystem.black,
               unselectedLabelStyle: FontSystem.Sub3,
 
               // When selected
-              selectedLabelStyle: FontSystem.Sub3,
-              selectedItemColor: ColorSystem.primary.shade700,
-
+              selectedLabelStyle: FontSystem.Sub3Bold,
+              selectedItemColor: ColorSystem.black,
+              selectedIconTheme: IconThemeData(
+                color: ColorSystem.bottomNaviagation.shade100,
+              ),
               // Items
               items: [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
-                  label: 'Home',
+                  label: '홈',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.search),
-                  label: 'Search',
+                  icon: Icon(Icons.heart_broken),
+                  label: '찜',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
-                  label: 'Profile',
+                  icon: Icon(Icons.face),
+                  label: 'MY 배달',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
-                  label: 'Settings',
+                  icon: Icon(Icons.note),
+                  label: '주문내역',
                 ),
               ],
             ),
