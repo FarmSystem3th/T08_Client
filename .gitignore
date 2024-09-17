@@ -324,4 +324,7 @@ fabric.properties
 # FVM Cache
 .fvm/
 
+# gradle properties
+gradle.properties
+
 # End of https://www.toptal.com/developers/gitignore/api/dart,flutter,macos,androidstudio,xcode,windows,visualstudiocode
