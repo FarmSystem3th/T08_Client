@@ -59,6 +59,9 @@ dependencies:
   # Extended Nested Scroll View
   extended_nested_scroll_view: ^6.2.1
 
+  # sqflite
+  sqflite: ^2.3.3+1
+
 dev_dependencies:
   # Default
   flutter_test:
