@@ -1,8 +1,8 @@
 import 'package:farm04_modeul/core/view/base_screen.dart';
 import 'package:farm04_modeul/app/config/color_system.dart';
-import 'package:farm04_modeul/presentation/view/home/widget/home_food_category_list_view.dart';
+import 'package:farm04_modeul/presentation/view/home/widget/food_category/home_food_category_list_view.dart';
+import 'package:farm04_modeul/presentation/view/home/widget/header/home_type_toggle_button.dart';
 import 'package:farm04_modeul/presentation/view_model/home/home_view_model.dart';
-import 'package:farm04_modeul/presentation/view/home/widget/component/home_type_toggle_button.dart';
 import 'package:farm04_modeul/presentation/widget/image/svg_image_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +31,7 @@ class HomeScreen extends BaseScreen<HomeViewModel>{
           Center(
             child: HomeTypeToggleButton(),
           ),
+          const SizedBox(height: 20),
           Expanded(
             child: HomeFoodCategoryListView(),
           ),
