@@ -27,7 +27,7 @@ abstract class ColorSystem {
       800: Color(0xFF007268),
       700: Color(0xFF008D73),
       600: Color(0xFF00A978),
-      500: Color(0xFF00C579),
+      500: Color(0xFFF2C84B),
       400: Color(0xFF37DC8C),
       300: Color(0xFF5FED9A),
       200: Color(0xFF95F9B5),
@@ -126,4 +126,22 @@ abstract class ColorSystem {
     },
   );
   static const int _blueValue = 0xFF5891EB;
+
+  /// gray color
+  static const MaterialColor gray = MaterialColor(
+    _grayValue,
+    <int, Color>{
+      900: Color(0xFF102670),
+      800: Color(0xFF1C3988),
+      700: Color(0xFF2C52A9),
+      600: Color(0xFF4070CA),
+      500: Color(0xFF5891EB),
+      400: Color(0xFF80B1F3),
+      300: Color(0xFF9BC7F9),
+      200: Color(0xFFF3F6F8),
+      100: Color(0xFFDEEFFE),
+      50: Color(0xFFEBF4FC),
+    },
+  );
+  static const int _grayValue = 0xFF5891EB;
 }
