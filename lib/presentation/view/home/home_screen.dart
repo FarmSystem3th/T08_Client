@@ -30,6 +30,9 @@ class HomeScreen extends BaseScreen<HomeViewModel>{
           Center(
             child: HomeTypeToggleButton(),
           ),
+          Expanded(
+            child: HomeFoodCategoryListView(),
+          ),
           SizedBox(height: GetPlatform.isAndroid ? 74 : 112),
         ],
       ),
