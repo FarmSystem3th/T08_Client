@@ -83,4 +83,12 @@ abstract class FontSystem {
     color: Colors.black,
     height: 1.667,
   );
+
+  static const TextStyle Sub4Bold = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w700,
+    fontFamily: AppConfig.APP_FONT_STYLE,
+    color: Colors.black,
+    height: 1.5,
+  );
 }
