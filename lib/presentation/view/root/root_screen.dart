@@ -1,3 +1,4 @@
+import 'package:farm04_modeul/presentation/view/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:farm04_modeul/core/view/base_screen.dart';
@@ -17,7 +18,7 @@ class RootScreen extends BaseScreen<RootViewModel> {
       () => IndexedStack(
         index: viewModel.selectedIndex,
         children: const [
-          StoreScreen(),
+          HomeScreen(),
           StoreScreen(),
           StoreScreen(),
           StoreScreen(),

@@ -2,4 +2,5 @@
 
 abstract class AppRoutes {
   static const String ROOT = '/';
+  static const String HOME = '/home';
 }
