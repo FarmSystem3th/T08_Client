@@ -22,8 +22,8 @@ class HomeFoodCategoryItem extends StatelessWidget {
         children: [
           SvgImageBox(
               assetPath: state.assetsPath,
-              width: 45,
-              height: 45,
+              width: 40,
+              height: 40,
               color: ColorSystem.primary.shade500
           ),
           Text(
