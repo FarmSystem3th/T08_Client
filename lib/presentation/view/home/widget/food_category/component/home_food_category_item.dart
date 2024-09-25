@@ -1,6 +1,6 @@
 import 'package:farm04_modeul/app/config/color_system.dart';
 import 'package:farm04_modeul/app/config/font_system.dart';
-import 'package:farm04_modeul/presentation/view_model/home/home_view_model.dart';
+import 'package:farm04_modeul/presentation/view_model/home/food_category/home_food_category_view_model.dart';
 import 'package:farm04_modeul/presentation/widget/image/svg_image_box.dart';
 import 'package:flutter/material.dart';
 

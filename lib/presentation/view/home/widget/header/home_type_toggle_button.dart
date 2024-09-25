@@ -1,11 +1,11 @@
 import 'package:farm04_modeul/app/config/color_system.dart';
 import 'package:farm04_modeul/app/utility/log_util.dart';
 import 'package:farm04_modeul/core/view/base_widget.dart';
-import 'package:farm04_modeul/presentation/view_model/home/home_view_model.dart';
+import 'package:farm04_modeul/presentation/view_model/home/header/home_header_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeTypeToggleButton extends BaseWidget<HomeViewModel> {
+class HomeTypeToggleButton extends BaseWidget<HomeHeaderViewModel> {
   const HomeTypeToggleButton({super.key});
 
   Widget buildToggleButton(String text, bool isSelected, VoidCallback onTap) {

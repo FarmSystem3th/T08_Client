@@ -13,7 +13,7 @@ class HomeFoodCategoryItemState {
   });
 }
 
-class HomeViewModel extends GetxController {
+class HomeFoodCategoryViewModel extends GetxController {
   /* ------------------------------------------------------ */
   /* Static Fields ---------------------------------------- */
   /* ------------------------------------------------------ */
@@ -25,13 +25,11 @@ class HomeViewModel extends GetxController {
   /* ------------------------------------------------------ */
   /* Private Fields --------------------------------------- */
   /* ------------------------------------------------------ */
-  late RxInt _selectedTypeToggleIndex = RxInt(-1); /// viewModel 값 업데이트를 위해 RxInt 값 이용
   late final RxList<HomeFoodCategoryItemState> _homeFoodCategoryOverviewList;
 
   /* ------------------------------------------------------ */
   /* Public Fields ---------------------------------------- */
   /* ------------------------------------------------------ */
-  int get selectedTypeToggleIndex => _selectedTypeToggleIndex.value; /// getter method
   List<HomeFoodCategoryItemState> get homeFoodCategoryOverviewList => _homeFoodCategoryOverviewList;
 
   /* ------------------------------------------------------ */
@@ -41,8 +39,6 @@ class HomeViewModel extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
-    _selectedTypeToggleIndex = RxInt(-1);
     _homeFoodCategoryOverviewList = <HomeFoodCategoryItemState>[].obs;
   }
 
@@ -52,13 +48,6 @@ class HomeViewModel extends GetxController {
     _updateFoodCategoryData();
   }
 
-  // toggle select 변경하기
-  void changeTypeToggleIndex(int index) {
-    _selectedTypeToggleIndex.value = index;
-    LogUtil.info(
-      "changed seletedTypeToggleIndex to ${index}",
-    );
-  }
   // food category list 데이터 업데이트
   void _updateFoodCategoryData() async {
     List<HomeFoodCategoryItemState> data = [
