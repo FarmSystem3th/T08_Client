@@ -117,7 +117,7 @@ abstract class ColorSystem {
       800: Color(0xFF1C3988),
       700: Color(0xFF2C52A9),
       600: Color(0xFF4070CA),
-      500: Color(0xFF5891EB),
+      500: Color(0xFF589CF6),
       400: Color(0xFF80B1F3),
       300: Color(0xFF9BC7F9),
       200: Color(0xFFBDDDFD),

@@ -1,3 +1,4 @@
+import 'package:farm04_modeul/presentation/widget/image/svg_image_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:farm04_modeul/app/config/color_system.dart';
@@ -60,19 +61,47 @@ class CustomBottomNavigationBar extends BaseWidget<RootViewModel> {
               // Items
               items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
+                  icon: SvgImageBox(
+                      assetPath: 'assets/icons/bottom_navigation_home.svg',
+                      width: 26,
+                      height: 26,
+                      color: viewModel.selectedIndex == 0
+                          ? ColorSystem.blue.shade500
+                          : ColorSystem.neutral.shade200,
+                  ),
                   label: '홈',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.heart_broken),
+                  icon: SvgImageBox(
+                      assetPath: 'assets/icons/bottom_navigation_heart.svg',
+                      width: 26,
+                      height: 26,
+                      color: viewModel.selectedIndex == 1
+                          ? ColorSystem.blue.shade500
+                          : ColorSystem.neutral.shade200,
+                  ),
                   label: '찜',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.face),
+                  icon: SvgImageBox(
+                      assetPath: 'assets/icons/bottom_navigation_smile.svg',
+                      width: 26,
+                      height: 26,
+                      color: viewModel.selectedIndex == 2
+                          ? ColorSystem.blue.shade500
+                          : ColorSystem.neutral.shade200,
+                  ),
                   label: 'MY 배달',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.note),
+                  icon: SvgImageBox(
+                      assetPath: 'assets/icons/bottom_navigation_note.svg',
+                      width: 26,
+                      height: 26,
+                      color: viewModel.selectedIndex == 3
+                          ? ColorSystem.blue.shade500
+                          : ColorSystem.neutral.shade200,
+                  ),
                   label: '주문내역',
                 ),
               ],
