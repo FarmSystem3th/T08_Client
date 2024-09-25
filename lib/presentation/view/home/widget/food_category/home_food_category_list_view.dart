@@ -16,7 +16,7 @@ class HomeFoodCategoryListView extends BaseWidget<HomeViewModel>{
           List<HomeFoodCategoryItemState> items = viewModel.homeFoodCategoryOverviewList;
 
           return GridView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 0),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 5, mainAxisSpacing: 5),
               itemCount: items.length,

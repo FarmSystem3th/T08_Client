@@ -1,4 +1,5 @@
 import 'package:farm04_modeul/presentation/view/home/home_screen.dart';
+import 'package:farm04_modeul/presentation/view_model/home/header/home_header_binding.dart';
 import 'package:farm04_modeul/presentation/view_model/home/home_binding.dart';
 import 'package:get/get.dart';
 import 'package:farm04_modeul/app/config/app_routes.dart';
@@ -14,6 +15,7 @@ abstract class AppPages {
       bindings: [
         RootBinding(),
         HomeBinding(),
+        HomeHeaderBinding(),
         DeliveryeumBinding(),
       ],
     ),

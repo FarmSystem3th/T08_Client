@@ -1,6 +1,7 @@
 import 'package:farm04_modeul/core/view/base_screen.dart';
 import 'package:farm04_modeul/app/config/color_system.dart';
 import 'package:farm04_modeul/presentation/view/home/widget/food_category/home_food_category_list_view.dart';
+import 'package:farm04_modeul/presentation/view/home/widget/header/home_top_banner_view.dart';
 import 'package:farm04_modeul/presentation/view/home/widget/header/home_type_toggle_button.dart';
 import 'package:farm04_modeul/presentation/view_model/home/home_view_model.dart';
 import 'package:farm04_modeul/presentation/widget/image/svg_image_box.dart';
@@ -22,22 +23,21 @@ class HomeScreen extends BaseScreen<HomeViewModel>{
 
   @override
   Widget buildBody(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
+    return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 20),
           Center(
             child: HomeTypeToggleButton(),
           ),
+          const SizedBox(height: 10),
+          HomeTopBannerView(),
           const SizedBox(height: 20),
           Expanded(
             child: HomeFoodCategoryListView(),
           ),
           SizedBox(height: GetPlatform.isAndroid ? 74 : 112),
         ],
-      ),
-    );
+      );
   }
 }
