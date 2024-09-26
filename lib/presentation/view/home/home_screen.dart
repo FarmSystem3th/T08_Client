@@ -26,6 +26,7 @@ class HomeScreen extends BaseScreen<HomeFoodCategoryViewModel>{
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const SizedBox(height: 4),
           Center(
             child: HomeTypeToggleButton(),
           ),
