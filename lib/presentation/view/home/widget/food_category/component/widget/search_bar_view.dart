@@ -51,7 +51,7 @@ class _SearchBarViewState extends State<SearchBarView> {
           ),
           hoverColor: ColorSystem.black,
           suffixIcon: Container(
-            padding: const EdgeInsets.all(16), // 아이콘 주변에 여백을 추가하여 크기를 조정
+            padding: const EdgeInsets.all(14), // 아이콘 주변에 여백을 추가하여 크기를 조정
             child: SvgImageBox(
               assetPath: 'assets/icons/home_list_search_icon.svg',
               width: 14,
