@@ -28,6 +28,14 @@ abstract class FontSystem {
     height: 1.2,
   );
 
+  static const TextStyle ThinH4 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    fontFamily: AppConfig.APP_FONT_STYLE,
+    color: Colors.black,
+    height: 1.333,
+  );
+
   static const TextStyle H4 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w700,
@@ -47,6 +55,14 @@ abstract class FontSystem {
   static const TextStyle H6 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
+    fontFamily: AppConfig.APP_FONT_STYLE,
+    color: Colors.black,
+    height: 1.25,
+  );
+
+  static const TextStyle APPBAR = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
     fontFamily: AppConfig.APP_FONT_STYLE,
     color: Colors.black,
     height: 1.25,

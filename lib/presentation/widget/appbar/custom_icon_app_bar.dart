@@ -1,40 +1,48 @@
+import 'package:farm04_modeul/app/config/app_routes.dart';
+import 'package:farm04_modeul/app/config/font_system.dart';
+import 'package:farm04_modeul/presentation/widget/image/svg_image_box.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:farm04_modeul/app/config/color_system.dart';
+import 'package:get/get.dart';
 
 class CustomIconAppBar extends StatelessWidget {
   const CustomIconAppBar({
     super.key,
-    required this.svgPath,
-    required this.svgWidth,
-    required this.svgHeight,
     this.actions = const <Widget>[],
+    required this.selectedAddress,
   });
 
-  final String svgPath;
-  final double svgWidth;
-  final double svgHeight;
   final List<Widget> actions;
+  final String selectedAddress;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: ColorSystem.neutral.shade200,
-            width: 1,
-          ),
-        ),
-      ),
       child: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.only(left: 4.0),
-          child: SvgPicture.asset(
-            svgPath,
-            width: svgWidth,
-            height: svgHeight,
+        title: Row(
+          children: [
+            Text(
+            selectedAddress, // 선택된 주소 표시
+            style: FontSystem.APPBAR,
           ),
+            const SizedBox(width: 16),
+            GestureDetector(
+              onTap: () {
+                Get.toNamed(
+                  AppRoutes.ROOT,
+                  arguments: {
+                    'address': selectedAddress, // 나중에 주소 선택 창으로 이동
+                  },
+                );
+              },
+              child: SvgImageBox(
+                assetPath: 'assets/icons/app_bar_arrow_dropdown.svg',
+                width: 10,
+                height: 8,
+                color: ColorSystem.black,
+              ),
+            ),
+          ],
         ),
         surfaceTintColor: Colors.white,
         backgroundColor: Colors.white,
