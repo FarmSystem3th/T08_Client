@@ -38,5 +38,4 @@ class HomeTopBannerView extends BaseWidget<HomeHeaderViewModel> {
       },
     );
   }
-
 }

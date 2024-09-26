@@ -35,7 +35,7 @@ abstract class ColorSystem {
       50: Color(0xFFF1FFF4),
     },
   );
-  static const int _primaryValue = 0xFF00C579;
+  static const int _primaryValue = 0xFFF2C84B;
 
   /// Secondary Color
   static const MaterialColor secondary = MaterialColor(

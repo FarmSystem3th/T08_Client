@@ -1,5 +1,6 @@
 import 'package:farm04_modeul/core/view/base_screen.dart';
 import 'package:farm04_modeul/app/config/color_system.dart';
+import 'package:farm04_modeul/presentation/view/home/widget/food_category/component/home_search_store_bar.dart';
 import 'package:farm04_modeul/presentation/view/home/widget/food_category/home_food_category_list_view.dart';
 import 'package:farm04_modeul/presentation/view/home/widget/header/home_top_banner_view.dart';
 import 'package:farm04_modeul/presentation/view/home/widget/header/home_type_toggle_button.dart';
@@ -32,6 +33,8 @@ class HomeScreen extends BaseScreen<HomeFoodCategoryViewModel>{
           ),
           const SizedBox(height: 10),
           HomeTopBannerView(),
+          const SizedBox(height: 16),
+          HomeSearchStoreBar(),
           const SizedBox(height: 20),
           Expanded(
             child: HomeFoodCategoryListView(),
